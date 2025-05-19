@@ -1,0 +1,103 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    overflow: hidden;
+    transition: background 1s ease-in-out;
+    position: relative;
+}
+
+body.celebrate {
+    background: #2c2c2c;
+}
+
+.popup {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-width: 400px;
+    animation: fadeIn 1s ease-in-out;
+    z-index: 10;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h2 {
+    color: #d63384;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.yes {
+    background-color: #ff9999;
+    color: white;
+}
+.yes:hover {
+    background-color: #ff1493;
+}
+
+.no {
+    background-color: #ff9999;
+    color: white;
+}
+.no:hover {
+    background-color: #ff1493;
+}
+
+/* Fireworks Effect */
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, yellow, red, blue, green, purple);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: explode 1.5s ease-out forwards;
+}
+
+@keyframes explode {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(3); opacity: 1; }
+    100% { transform: scale(5); opacity: 0; }
+}
+
+/* Stickers */
+body::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 80px;
+    height: 80px;
+    background: url('https://i.imgur.com/6Tbk2s5.png') no-repeat center/cover;
+}
+body::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+    background: url('https://i.imgur.com/1JxUoD5.png') no-repeat center/cover;
+}
+
